@@ -14,30 +14,18 @@ function atualizarCidades() {
     let estadoSelecionado = document.getElementById("estado").value;
     let cidadeSelect = document.getElementById("cidade");
 
-    // Limpa as opções anteriores
+//limpar as cidades após primeira seleção
     cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>';
 
-    // Verifica se o estado foi selecionado
     if (estadoSelecionado in cidadesPorEstado) {
-
-        let cidade = cidadesPorEstado[estadoSelecionado]
-
-        for (let i; i < cidade.length; i++);
-        let option = document.createElement("option");
-        option.value = cidade;
-        option.textContent = cidade;
-        cidadeSelect.appendChild(option)
-        
-
-        // alert(cidades);
-
-        // // Adiciona as novas cidades ao select de cidades
-        // cidadesPorEstado[estadoSelecionado].forEach(cidade => {
-        //     let option = document.createElement("option");
-        //     option.value = cidade;
-        //     option.textContent = cidade;
-        //     cidadeSelect.appendChild(option);
-        // });
+// atribuir as cidades ao select segundo a as ciodades do estado selecionado
+        let cidades = cidadesPorEstado[estadoSelecionado];
+        for (let i = 0; i < cidades.length; i++) {
+            let option = document.createElement("option");
+            option.value = cidades[i];
+            option.textContent = cidades[i];
+            cidadeSelect.appendChild(option);
+        }
     }
 }
 
