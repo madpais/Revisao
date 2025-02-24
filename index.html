@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefa PWII</title>
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="atualizarCidades()">
 
-    <h3>Selecione o Estado para saber suas 30 cidades com maior densidade populacional</h3>
+    <h3>Selecione o Estado para saber suas 30 cidades com maior densidade populacional em ordem da maior para a menor.</h3>
 
     <label name="estado" for="estado"></label>
     <select id="estado" onchange="atualizarCidades()">
@@ -23,9 +24,8 @@
     <select id="cidade">
         <option value="">Selecione um estado primeiro</option>
     </select>
-    
 
 
-<script src="script.js"></script>
+
 </body>
 </html>

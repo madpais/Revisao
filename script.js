@@ -15,7 +15,7 @@ function atualizarCidades() {
     let cidadeSelect = document.getElementById("cidade");
 
 //limpar as cidades após primeira seleção
-    cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>';
+ 
 
     if (estadoSelecionado in cidadesPorEstado) {
 // atribuir as cidades ao select segundo a as ciodades do estado selecionado
@@ -26,6 +26,9 @@ function atualizarCidades() {
             option.textContent = cidades[i];
             cidadeSelect.appendChild(option);
         }
-    }
+
+    }   
+    
 }
+
 
